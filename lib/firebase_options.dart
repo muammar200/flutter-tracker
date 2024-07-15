@@ -57,6 +57,8 @@ class DefaultFirebaseOptions {
     appId: '1:771640532359:android:9d0de0c871594276218722',
     messagingSenderId: '771640532359',
     projectId: 'tubes-529ce',
+    databaseURL: 'https://tubes-529ce-default-rtdb.asia-southeast1.firebasedatabase.app',
     storageBucket: 'tubes-529ce.appspot.com',
   );
+
 }

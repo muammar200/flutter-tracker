@@ -14,9 +14,7 @@ class MapPage extends StatelessWidget {
       ..setBackgroundColor(const Color(0x00000000))
       ..setNavigationDelegate(
         NavigationDelegate(
-          onProgress: (int progress) {
-            // Update loading bar.
-          },
+          onProgress: (int progress) {},
           onPageStarted: (String url) {},
           onPageFinished: (String url) {},
           onHttpError: (HttpResponseError error) {},
@@ -31,7 +29,8 @@ class MapPage extends StatelessWidget {
         ),
       )
       ..loadRequest(Uri.parse(
-          'https://www.google.com/maps/search/?api=1&query=$lat,$long'));
+        'https://www.google.com/maps/search/?api=1&query=$lat,$long',
+      ));
 
     return Scaffold(
       body: WebViewWidget(controller: controller),
