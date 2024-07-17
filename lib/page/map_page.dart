@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
+import 'package:provider/provider.dart';
+import 'package:tb/theme_provider.dart';
 
 class MapPage extends StatelessWidget {
   const MapPage({super.key, required this.lat, required this.long});
@@ -33,6 +35,13 @@ class MapPage extends StatelessWidget {
       ));
 
     return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          'App Tracker',
+          style: TextStyle(color: Colors.white),
+        ),
+        backgroundColor: Colors.blue,
+      ),
       body: WebViewWidget(controller: controller),
     );
   }
